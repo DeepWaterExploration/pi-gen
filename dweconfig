@@ -1,0 +1,13 @@
+IMG_NAME="DWE_OS_2"
+USE_QEMU=0
+LOCALE_DEFAULT="en_US.UTF-8"
+WPA_COUNTRY="US"
+
+# username and password
+DISABLE_FIRST_BOOT_USER_RENAME=1
+FIRST_USER_NAME="dwe"
+FIRST_USER_PASS="deepwater"
+ENABLE_SSH=1
+
+# Stages to build
+STAGE_LIST="stage0 stage1 stage2"
