@@ -9,5 +9,8 @@ FIRST_USER_NAME="dwe"
 FIRST_USER_PASS="deepwater"
 ENABLE_SSH=1
 
+# networking
+TARGET_HOSTNAME="dweos"
+
 # Stages to build
 STAGE_LIST="stage0 stage1 stage2"
