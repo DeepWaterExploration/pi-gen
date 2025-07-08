@@ -32,6 +32,6 @@ chmod 600 "$file_path"
 DWE_VERSION=${DWE_VERSION:-latest}
 
 # Run the DWE OS install script
-on_chroot <<- \EOF
+on_chroot <<- EOF
     curl -s https://raw.githubusercontent.com/DeepwaterExploration/DWE_OS_2/main/install.sh | sudo bash -s -- $DWE_VERSION
 EOF
