@@ -14,3 +14,5 @@ TARGET_HOSTNAME="dweos"
 
 # Stages to build
 STAGE_LIST="stage0 stage1 stage2"
+
+#export DWE_VERSION="v0.5.0-beta" #Add this line to config file to set the DWE release version to build from
