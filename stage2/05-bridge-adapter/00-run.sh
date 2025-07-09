@@ -6,6 +6,7 @@ log "Installing Bridge Adapter"
 
 #run the script as root from now on
 on_chroot << EOF
+sudo apt-get install -y libsystemd-dev
 INSTALL_DIR=/opt/bridge-adapter
 echo "Installing Bridge Adapter to \${INSTALL_DIR}"
 mkdir -p "\${INSTALL_DIR}"
