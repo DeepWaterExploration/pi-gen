@@ -34,3 +34,12 @@ chmod 600 "$file_path"
 on_chroot <<- \EOF
     curl -s https://raw.githubusercontent.com/DeepwaterExploration/DWE_OS_2/main/install.sh | sudo bash -s
 EOF
+
+# Install the usb quirks for microSVC
+
+cmdline_path="${ROOTFS_DIR}/boot/firmware/cmdline.txt"
+if [ -f "$cmdline_path" ]; then
+    sed -i -e 's/$/ usbcore.autosuspend=-1 usbcore.quirks=0bda:8152:k/' "$cmdline_path"
+else
+    echo "Warning: $cmdline_path not found, skipping USB quirks configuration."
+fi
